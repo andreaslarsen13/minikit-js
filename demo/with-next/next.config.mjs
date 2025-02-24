@@ -3,8 +3,10 @@ const nextConfig = {
   images: {
     domains: ['static.usernames.app-backend.toolsforhumanity.com'],
   },
-  experiments: {
-    asyncWebAssembly: true,
+  webpack: config => {
+    let newConfig = { ...config };
+    newConfig.experiments.asyncWebAssembly = true;
+    return newConfig;
   }
 };
 
