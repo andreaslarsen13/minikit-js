@@ -35,4 +35,17 @@ export const authOptions: NextAuthOptions = {
     },
   },
   debug: true,
+  // Use the ngrok URL for callbacks
+  useSecureCookies: true,
+  cookies: {
+    sessionToken: {
+      name: `next-auth.session-token`,
+      options: {
+        httpOnly: true,
+        sameSite: 'none',
+        path: '/',
+        secure: true,
+      },
+    },
+  },
 };
