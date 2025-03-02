@@ -41,11 +41,11 @@ export const WalletAuth = () => {
   }, []);
 
   return (
-    <div className="grid gap-y-4">
+    <div>
       <h2 className="text-2xl font-bold" style={{ display: 'none' }}>Wallet Authentication</h2>
 
       <button
-        className="bg-black text-white rounded-lg p-4 w-full text-lg font-medium"
+        className="bg-black text-white rounded-xl p-4 w-full text-lg font-medium shadow-md"
         onClick={onSignInWithWallet}
         disabled={authStatus === 'pending'}
       >
@@ -53,19 +53,19 @@ export const WalletAuth = () => {
       </button>
 
       {authStatus === 'pending' && (
-        <div className="mt-4">
+        <div className="mt-2 text-center">
           <p className="text-sm text-gray-500">Authentication in progress...</p>
         </div>
       )}
 
       {authStatus === 'success' && (
-        <div className="mt-4">
+        <div className="mt-2 text-center">
           <p className="text-sm text-green-500">Successfully authenticated with wallet!</p>
         </div>
       )}
 
       {authStatus === 'error' && (
-        <div className="mt-4">
+        <div className="mt-2 text-center">
           <p className="text-sm text-red-500">Authentication failed</p>
         </div>
       )}

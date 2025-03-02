@@ -66,11 +66,11 @@ export const VerifyAction = () => {
   }, []);
 
   return (
-    <div className="grid gap-y-4">
+    <div>
       <h2 className="font-bold text-2xl" style={{ display: 'none' }}>World ID Verification</h2>
 
       <button
-        className="bg-black text-white rounded-lg p-4 w-full text-lg font-medium"
+        className="bg-black text-white rounded-xl p-4 w-full text-lg font-medium shadow-md"
         onClick={onProdVerifyClick}
         disabled={verificationStatus === 'pending'}
       >
@@ -78,19 +78,19 @@ export const VerifyAction = () => {
       </button>
 
       {verificationStatus === 'pending' && (
-        <div className="mt-4">
+        <div className="mt-2 text-center">
           <p className="text-sm text-gray-500">Verification in progress...</p>
         </div>
       )}
 
       {verificationStatus === 'success' && (
-        <div className="mt-4">
+        <div className="mt-2 text-center">
           <p className="text-sm text-green-500">Verification successful!</p>
         </div>
       )}
 
       {verificationStatus === 'error' && (
-        <div className="mt-4">
+        <div className="mt-2 text-center">
           <p className="text-sm text-red-500">Verification failed</p>
         </div>
       )}
