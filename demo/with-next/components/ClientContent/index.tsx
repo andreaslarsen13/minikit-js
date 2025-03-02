@@ -2,6 +2,7 @@
 
 import { VerifyAction } from './VerifyAction';
 import { WalletAuth } from './WalletAuth';
+import { PlayGame } from './PlayGame';
 import { Leaderboard } from './Leaderboard';
 import dynamic from 'next/dynamic';
 
@@ -38,6 +39,7 @@ export const ClientContent = () => {
       
       {/* Sticky buttons at the bottom */}
       <div className="sticky bottom-0 w-full max-w-xs mx-auto space-y-4 py-4 bg-white border-t border-gray-100">
+        <PlayGame />
         <VerifyAction />
         <hr style={{ display: 'none' }} />
         <WalletAuth />
