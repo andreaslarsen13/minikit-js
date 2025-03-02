@@ -26,7 +26,7 @@ export const ClientContent = () => {
         </div>
         
         {/* Globe component - centered and larger */}
-        <div className="w-full max-w-md mx-auto">
+        <div className="w-full max-w-md mx-auto" style={{ pointerEvents: 'auto' }}>
           <EnhancedGlobe />
         </div>
         

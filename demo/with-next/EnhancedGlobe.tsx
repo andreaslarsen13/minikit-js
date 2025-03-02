@@ -223,16 +223,19 @@ function Globe() {
 
 export default function EnhancedGlobe() {
   return (
-    <div className="w-full h-[400px] my-12">
+    <div className="jsx-9269fa9e3c20a847 w-full h-[400px] my-12" style={{ pointerEvents: 'auto' }}>
       <style jsx>{`
         .globe-container {
           width: 100%;
           height: 100%;
           position: relative;
+          pointer-events: auto;
         }
       `}</style>
-      <div className="globe-container">
-        <Globe />
+      <div className="jsx-9269fa9e3c20a847 globe-container" style={{ pointerEvents: 'auto' }}>
+        <div style={{ position: 'relative', width: '100%', height: '400px', overflow: 'hidden', pointerEvents: 'auto', touchAction: 'none' }}>
+          <Globe />
+        </div>
       </div>
     </div>
   )
